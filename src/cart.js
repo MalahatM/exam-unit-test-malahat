@@ -18,6 +18,8 @@ Tips:
 // -------------------------------------------------- //
 
 import { isCartItem, isProduct } from "./validation.js"
+import { clearCart } from '../cart.js';
+
 
 let cart = []
 let idCounter = 2002
@@ -43,4 +45,4 @@ function addToCart(newItem) {
 
 
 
-export { getCartItemCount, addToCart }
+export { getCartItemCount, addToCart}

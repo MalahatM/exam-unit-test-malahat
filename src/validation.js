@@ -5,7 +5,20 @@
 // 4. refactor as neccessary before you move on to the next
 // 5. repeat
 
-function isCartItem(maybeCartItem) {}
+
+function isCartItem(obj) {
+  return (
+    typeof obj === 'object' &&
+    obj !== null &&
+    'id' in obj &&
+    typeof obj.id === 'number' &&
+    'amount' in obj &&
+    typeof obj.amount === 'number' &&
+    'item' in obj &&
+    typeof obj.item === 'object' &&
+    obj.item !== null
+  );
+}
 
 function isProduct(maybeProduct) {}
 
