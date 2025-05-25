@@ -14,6 +14,21 @@ const exampleCartObject = {
 
 // Group tests using "describe"
 describe('Validation', () => {
+
+	test('ska returnera true för ett giltigt produkt', () => {
+  const validProduct = {
+    id: 1001,
+    name: 'Badanka',
+    price: 500
+  };
+ // Arrange
+  const expected = true;
+   // Act
+  const actual = isProduct(validProduct);
+  // Assert
+  expect(actual).toBe(expected);
+});
+
 	
   
   test('ska returnera true för ett giltigt cart object', () => {
@@ -42,7 +57,9 @@ describe('Validation', () => {
 
 
   });
-   });
+   
+  });
+ 
 
 	// Använd en "test" eller "it" (de är synonymer) för varje testfall
 	/* Exempel på syntax:
@@ -62,4 +79,3 @@ describe('Validation', () => {
 
 	// 3. it returns true for a valid product
 	// 4. it returns false for invalid cart objects
-
