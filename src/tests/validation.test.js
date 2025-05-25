@@ -25,7 +25,24 @@ describe('Validation', () => {
 
     // Assert
     expect(actual).toBe(expected);
+	});
+
+	  test('ska returnera false om id inte är ett nummer', () => {
+		//Arrange
+		const invalidCartObject = {
+      id: "hej",
+      amount: 1,
+      item: exampleProduct
+    };
+	const expected = false;
+	//Act
+	const actual = isCartItem(invalidCartObject)
+	//Assert
+	 expect(actual).toBe(expected);
+
+
   });
+   });
 
 	// Använd en "test" eller "it" (de är synonymer) för varje testfall
 	/* Exempel på syntax:
@@ -45,4 +62,4 @@ describe('Validation', () => {
 
 	// 3. it returns true for a valid product
 	// 4. it returns false for invalid cart objects
-})
+
