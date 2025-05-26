@@ -15,19 +15,6 @@ const exampleCartObject = {
 // Group tests using "describe"
 describe('Validation', () => {
 
-	//test('ska returnera true för ett giltigt produkt', () => {
-  //const validProduct = {
-   // id: 1001,
-   // name: 'Badanka',
-   // price: 500
- // };
- // Arrange
-  //const expected = true;
-   // Act
-  //const actual = isProduct(validProduct);
-  // Assert
-  //expect(actual).toBe(expected);
-//});
 
 	
   
@@ -115,12 +102,26 @@ test('ska returnera false om item inte är ett objekt', () => {
 
     expect(actual).toBe(expected);
 
+  })
+ 
+  test ('ska returnera false om price är inte number',()=>{
+	const invalidProduct={
+			id: 1001,
+	name: 'Badanka',
+	price: 'hej'
+};
+  const expected = false;
+
+    const actual = isProduct(invalidProduct);
+
+    expect(actual).toBe(expected);
+	})
   });
 
 
 
    
-});
+
  
 
 	// Använd en "test" eller "it" (de är synonymer) för varje testfall
