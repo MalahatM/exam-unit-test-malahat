@@ -116,6 +116,19 @@ test('ska returnera false om item inte är ett objekt', () => {
 
     expect(actual).toBe(expected);
 	})
+
+  test ('ska returnera true for gilligt object',()=>{
+	const invalidProduct={
+			id: 1001,
+	name: 'Badanka',
+	price: 500
+};
+  const expected = true;
+
+    const actual = isProduct(invalidProduct);
+
+    expect(actual).toBe(expected);
+	})
   });
 
 
