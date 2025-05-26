@@ -11,7 +11,17 @@ describe('Cart', () => {
 
 
 	// -------------------------------------------------- //
-	// Skriv dina testfall här
+	
+	test('getCartItemCount ska returnera 0 när kundvagnen är tom', () => {
+  // Arrange
+  clearCart(); // 
+
+  // Act
+  const actual = getCartItemCount();
+
+  // Assert
+  expect(actual).toBe(0);
+});
 
 	// Du får ett test att börja med
 	test('addToCart lägger till en ny produkt i kundvagnen', () => {
