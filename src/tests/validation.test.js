@@ -102,6 +102,23 @@ test('ska returnera false om item inte är ett objekt', () => {
   });
 
 
+  test('ska returnera false om name inte är string',()=>{
+	const invalidProduct={
+
+	 id: 1001,
+      name: 10,
+      price: 500
+	};
+	  const expected = false;
+
+    const actual = isProduct(invalidProduct);
+
+    expect(actual).toBe(expected);
+
+  });
+
+
+
    
 });
  
