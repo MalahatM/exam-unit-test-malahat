@@ -1,5 +1,5 @@
 // importera här
-import { addToCart,getItem, getCartItemCount,clearCart } from "../cart"
+import { addToCart,getItem,getTotalCartValue, getCartItemCount,clearCart } from "../cart"
 
 
 
