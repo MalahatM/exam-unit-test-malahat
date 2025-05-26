@@ -20,7 +20,14 @@ function isCartItem(obj) {
   );
 }
 
-function isProduct(maybeProduct) {}
+function isProduct(obj) {
+	return(
+		typeof obj === 'object' &&
+		 obj !== null &&
+		 'id' in obj &&
+    typeof obj.id === 'number'
+	)
+}
 
 
 export { isCartItem, isProduct }
