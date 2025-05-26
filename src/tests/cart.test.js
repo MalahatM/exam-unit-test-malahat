@@ -36,6 +36,18 @@ describe('Cart', () => {
 		expect(itemCountAfter).toBe(itemCountBefore + 1)
 	})
 
+	test('getItem ska returnera rätt objekt från kundvagnen med angivet index', () => {
+  // Arrange
+  const product = { id: 1002, name: 'Vattenpistol', price: 40 };
+  addToCart(product);
+
+  // Act
+  const actual = getItem(0);
+
+  // Assert
+  expect(actual.item).toEqual(product);
+});
+
 
 	// -------------------------------------------------- //
 })
