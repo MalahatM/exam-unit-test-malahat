@@ -23,7 +23,7 @@ describe('Cart', () => {
   expect(actual).toBe(0);
 });
 
-	// Du får ett test att börja med
+	
 	test('addToCart lägger till en ny produkt i kundvagnen', () => {
 		const itemCountBefore = getCartItemCount()
 		const input = { id: 1002, name: 'Vattenpistol', price: 40 }
