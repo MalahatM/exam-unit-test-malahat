@@ -34,7 +34,9 @@ function getCartItemCount() {
 }
 
 
-
+function getItem(index){
+	return cart[index]
+}
 
 
 function addToCart(newItem) {
@@ -49,4 +51,4 @@ function addToCart(newItem) {
 
 
 
-export { getCartItemCount, addToCart,clearCart};
+export { getCartItemCount,getItem, addToCart,clearCart};
