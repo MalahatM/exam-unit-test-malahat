@@ -14,9 +14,8 @@ function isCartItem(obj) {
     typeof obj.id === 'number' &&
     'amount' in obj &&
     typeof obj.amount === 'number' &&
-    'item' in obj &&
-    typeof obj.item === 'object' &&
-    obj.item !== null
+    'item' in obj 
+  
   );
 }
 

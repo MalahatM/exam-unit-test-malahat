@@ -72,6 +72,22 @@ describe('Validation', () => {
   // Assert
   expect(actual).toBe(expected);
 });
+test('ska returnera false om item inte är ett objekt', () => {
+  // Arrange
+  const invalidCartObject = {
+    id: 1,
+    amount: 1,
+    item: "hej" // ❌ string, inte ett objekt
+  };
+  const expected = false;
+
+  // Act
+  const actual = isCartItem(invalidCartObject);
+
+  // Assert
+  expect(actual).toBe(expected);
+});
+
 
    
 });
