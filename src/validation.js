@@ -8,7 +8,7 @@
 
 function isCartItem(obj) {
   return (
-    typeof obj === 'object' &&
+   typeof obj === 'object' &&
     obj !== null &&
     'id' in obj &&
     typeof obj.id === 'number' &&
