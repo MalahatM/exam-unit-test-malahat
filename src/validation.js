@@ -25,7 +25,9 @@ function isProduct(obj) {
 		typeof obj === 'object' &&
 		 obj !== null &&
 		 'id' in obj &&
-    typeof obj.id === 'number'
+    typeof obj.id === 'number'&&
+	'name'in obj &&
+	typeof obj.name ==='string'
 	)
 }
 
