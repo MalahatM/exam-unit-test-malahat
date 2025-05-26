@@ -77,7 +77,7 @@ test('ska returnera false om item inte är ett objekt', () => {
   const invalidCartObject = {
     id: 1,
     amount: 1,
-    item: "hej" // ❌ string, inte ett objekt
+    item: "hej" // string here
   };
   const expected = false;
 
@@ -87,6 +87,19 @@ test('ska returnera false om item inte är ett objekt', () => {
   // Assert
   expect(actual).toBe(expected);
 });
+
+ test('ska returnera false om id inte är ett nummer', () => {
+    const invalidProduct = {
+      id: "abc",
+      name: 'Badanka',
+      price: 500
+    };
+    const expected = false;
+
+    const actual = isProduct(invalidProduct);
+
+    expect(actual).toBe(expected);
+  });
 
 
    
