@@ -48,6 +48,24 @@ describe('Cart', () => {
   expect(actual.item).toEqual(product);
 });
 
+test('getTotalCartValue ska returnera och visa summa total pris', () => {
+  // Arrange
+  const product1 = { id: 1001, name: 'Badanka', price: 50 };
+  const product2 = { id: 1002, name: 'Vattenpistol', price: 40 };
+
+  addToCart(product1); // amount = 1
+  addToCart(product2); // amount = 1
+
+  const expected = 90;
+
+  // Act
+  const actual = getTotalCartValue();
+
+  // Assert
+  expect(actual).toBe(expected);
+});
+
+
 
 	// -------------------------------------------------- //
 })
