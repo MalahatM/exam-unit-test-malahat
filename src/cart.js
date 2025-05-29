@@ -54,8 +54,11 @@ function addToCart(newItem) {
 	idCounter++
 	cart.push(cartItem)
 }
+function removeFromCart(itemId) {
+  cart = cart.filter(cartItem => cartItem.id !== itemId);
+}
 
 
 
 
-export { getCartItemCount,getItem,getTotalCartValue, addToCart,clearCart};
+export { getCartItemCount,getItem,getTotalCartValue, addToCart,removeFromCart,clearCart};
