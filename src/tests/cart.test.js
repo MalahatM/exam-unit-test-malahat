@@ -80,6 +80,22 @@ test('removeFromCart tar bort rätt produkt från kundvagnen med hjälp av id', 
   expect(count).toBe(0);
 });
 
+test('editCart ska ändra antal (amount) för ett item i kundvagnen', () => {
+  // Arrange
+  const product = { id: 1002, name: 'Vattenpistol', price: 40 };
+  addToCart(product);
+  const item = getItem(0);
+
+  // Act
+  editCart(item.id, { amount: 2 });
+  const updatedItem = getItem(0);
+
+  // Assert
+  expect(updatedItem.amount).toBe(2);
+  expect(updatedItem.item.name).toBe("Vattenpistol");
+});
+
+
 
 	// -------------------------------------------------- //
 })
