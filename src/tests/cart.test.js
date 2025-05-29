@@ -66,6 +66,20 @@ test('getTotalCartValue ska returnera och visa summa total pris', () => {
 });
 
 
+test('removeFromCart tar bort rätt produkt från kundvagnen med hjälp av id', () => {
+  // Arrange
+  const product = { id: 1002, name: 'Vattenpistol', price: 40 };
+  addToCart(product);
+  const item = getItem(0);
+
+  // Act
+  removeFromCart(item.id);
+  const count = getCartItemCount();
+
+  // Assert
+  expect(count).toBe(0);
+});
+
 
 	// -------------------------------------------------- //
 })

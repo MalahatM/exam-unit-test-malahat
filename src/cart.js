@@ -57,4 +57,5 @@ function addToCart(newItem) {
 
 
 
+
 export { getCartItemCount,getItem,getTotalCartValue, addToCart,clearCart};
