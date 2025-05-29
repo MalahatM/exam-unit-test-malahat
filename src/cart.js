@@ -58,7 +58,12 @@ function removeFromCart(itemId) {
   cart = cart.filter(cartItem => cartItem.id !== itemId);
 }
 
+function editCart(itemId, newValues) {
+  const item = cart.find(item => item.id === itemId);
+  if (!item) return;
+  Object.assign(item, newValues);
+}
 
 
 
-export { getCartItemCount,getItem,getTotalCartValue, addToCart,removeFromCart,clearCart};
+export { getCartItemCount,getItem,getTotalCartValue, addToCart,removeFromCart,editCart,clearCart};
