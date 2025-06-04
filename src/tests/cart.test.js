@@ -58,18 +58,18 @@ describe('Cart', () => {
 		// Assert
 		expect(actual).toBeUndefined();
 	});
-
+	
 	test('getItem ska returnera undefined om index är null', () => {
-	// Arrange
-	addToCart({ id: 1001, name: 'Badanka', price: 500 });
-
-	// Act
-	const actual = getItem(null);
-
-	// Assert
-	expect(actual).toBeUndefined();
-});
-
+		// Arrange
+		addToCart({ id: 1001, name: 'Badanka', price: 500 });
+		
+		// Act
+		const actual = getItem(null);
+		
+		// Assert
+		expect(actual).toBeUndefined();
+	});
+	
 	
 	test('getTotalCartValue ska returnera och visa summa total pris', () => {
 		// Arrange
