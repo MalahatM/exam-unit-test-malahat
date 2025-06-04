@@ -26,11 +26,11 @@ let idCounter = 2002
 // -------------------------------------------------- //
 
 function clearCart() {
-  cart = [];
-  idCounter = 2002;
+	cart = [];
+	idCounter = 2002;
 }
 function getCartItemCount() {
-  return cart.reduce((sum, cartItem) => sum + cartItem.amount, 0);
+	return cart.reduce((sum, cartItem) => sum + cartItem.amount, 0);
 }
 
 
@@ -38,9 +38,9 @@ function getItem(index){
 	return cart[index]
 }
 function getTotalCartValue() {
-  return cart.reduce((sum, cartItem) => {
-    return sum + (cartItem.item.price * cartItem.amount);
-  }, 0);
+	return cart.reduce((sum, cartItem) => {
+		return sum + (cartItem.item.price * cartItem.amount);
+	}, 0);
 }
 
 
@@ -49,19 +49,19 @@ function addToCart(newItem) {
 	if( !isProduct(newItem) ) {
 		return false
 	}
-
+	
 	const cartItem = { id: idCounter, amount: 1, item: newItem }
 	idCounter++
 	cart.push(cartItem)
 }
 function removeFromCart(itemId) {
-  cart = cart.filter(cartItem => cartItem.id !== itemId);
+	cart = cart.filter(cartItem => cartItem.id !== itemId);
 }
 
 function editCart(itemId, newValues) {
-  const item = cart.find(item => item.id === itemId);
-  if (!item) return;
-  Object.assign(item, newValues);
+	const item = cart.find(item => item.id === itemId);
+	if (!item) return;
+	Object.assign(item, newValues);
 }
 
 
