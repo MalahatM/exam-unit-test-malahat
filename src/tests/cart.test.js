@@ -47,18 +47,18 @@ describe('Cart', () => {
 		// Assert
 		expect(actual.item).toEqual(product);
 	});
-
+	
 	test('getItem ska returnera undefined om index är ogiltigt', () => {
-	// Arrange
-	addToCart({ id: 1001, name: 'Bok', price: 100 }); // 
-
-	// Act
-	const actual = getItem("korv");
-
-	// Assert
-	expect(actual).toBeUndefined();
-});
-
+		// Arrange
+		addToCart({ id: 1001, name: 'Bok', price: 100 }); // 
+		
+		// Act
+		const actual = getItem("korv");
+		
+		// Assert
+		expect(actual).toBeUndefined();
+	});
+	
 	test('getTotalCartValue ska returnera och visa summa total pris', () => {
 		// Arrange
 		const product1 = { id: 1001, name: 'Badanka', price: 50 };
